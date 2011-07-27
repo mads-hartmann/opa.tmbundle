@@ -30,10 +30,6 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#record</string>
-		</dict>
-		<dict>
-			<key>include</key>
 			<string>#declarations</string>
 		</dict>
 		<dict>
@@ -174,47 +170,6 @@
 			<string>\b(_|as|do|else|if|match|then|type|with|and|begin|css|db|end|external|forall|import|package|parser|rec|server|val|xml_parser)\b</string>
 			<key>name</key>
 			<string>keyword.opa</string>
-		</dict>
-		<key>record</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>begin</key>
-					<string>\{</string>
-					<key>end</key>
-					<string>\}</string>
-					<key>name</key>
-					<string>meta.record.opa</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>captures</key>
-							<dict>
-								<key>1</key>
-								<dict>
-									<key>name</key>
-									<string>variable.parameter</string>
-								</dict>
-							</dict>
-							<key>match</key>
-							<string>(\w*)\s*=\s*(\w*)</string>
-						</dict>
-						<dict>
-							<key>captures</key>
-							<dict>
-								<key>1</key>
-								<dict>
-									<key>name</key>
-									<string>variable.parameter</string>
-								</dict>
-							</dict>
-							<key>match</key>
-							<string>~(\w*)</string>
-						</dict>
-					</array>
-				</dict>
-			</array>
 		</dict>
 		<key>strings</key>
 		<dict>
