@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>echo "&lt;meta http-equiv='Refresh' content='0;URL=http://opalang.org/resources/doc/index.html#api_libs.opa.html'&gt;"
+	<string>echo "&lt;meta http-equiv='Refresh' content='0;URL=http://opalang.org/resources/doc/index.html'&gt;"
 </string>
 	<key>input</key>
 	<string>none</string>

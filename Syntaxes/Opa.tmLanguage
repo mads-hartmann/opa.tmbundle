@@ -34,11 +34,11 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#keywords</string>
+			<string>#declarations</string>
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#declarations</string>
+			<string>#keywords</string>
 		</dict>
 		<dict>
 			<key>include</key>
@@ -110,7 +110,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>\b(type)\b\s(\w*)</string>
+					<string>\b(type)\b\s*([a-zA-Z_][a-zA-Z0-9_]*|`[^`\n\r]`)</string>
 				</dict>
 				<dict>
 					<key>begin</key>
@@ -160,7 +160,7 @@
 		<key>keywords</key>
 		<dict>
 			<key>match</key>
-			<string>\b(do|match|with|db|if|then|begin|end|else|parser|rec|and|val|package|import|external)\b</string>
+			<string>\b(_|as|do|else|if|match|then|type|with|and|begin|css|db|end|external|forall|import|package|parser|rec|server|val|xml_parser)\b</string>
 			<key>name</key>
 			<string>keyword.opa</string>
 		</dict>
