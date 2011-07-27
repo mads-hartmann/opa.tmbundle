@@ -9,7 +9,7 @@
 	<key>foldingStartMarker</key>
 	<string>/\*\*\s*$</string>
 	<key>foldingStopMarker</key>
-	<string>\*\*/</string>
+	<string>\*/</string>
 	<key>keyEquivalent</key>
 	<string>^~O</string>
 	<key>name</key>
@@ -54,7 +54,7 @@
 		<key>comments</key>
 		<dict>
 			<key>begin</key>
-			<string>/\*\*</string>
+			<string>/\*(\*)?</string>
 			<key>end</key>
 			<string>\*/</string>
 			<key>name</key>
@@ -66,6 +66,10 @@
 					<string>@\w*</string>
 					<key>name</key>
 					<string>keyword.annotation.opa</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#comments</string>
 				</dict>
 			</array>
 		</dict>
