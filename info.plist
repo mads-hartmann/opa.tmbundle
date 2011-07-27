@@ -4,6 +4,11 @@
 <dict>
 	<key>name</key>
 	<string>Opa</string>
+	<key>ordering</key>
+	<array>
+		<string>6EFC7D81-7319-47DD-A191-735B5DE53E02</string>
+		<string>AFDF17F6-F4B8-408C-96A4-575AF7B3CC70</string>
+	</array>
 	<key>uuid</key>
 	<string>3C6BD947-B761-4E03-91D1-305F385485A6</string>
 </dict>
