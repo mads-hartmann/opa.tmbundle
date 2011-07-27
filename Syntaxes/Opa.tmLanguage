@@ -44,6 +44,10 @@
 			<key>include</key>
 			<string>#constants</string>
 		</dict>
+		<dict>
+			<key>include</key>
+			<string>#directive</string>
+		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
@@ -55,6 +59,15 @@
 			<string>\*/</string>
 			<key>name</key>
 			<string>comment.block.opa</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>@\w*</string>
+					<key>name</key>
+					<string>keyword.annotation.opa</string>
+				</dict>
+			</array>
 		</dict>
 		<key>constants</key>
 		<dict>
@@ -121,6 +134,13 @@
 					<string>(\w*)\s=</string>
 				</dict>
 			</array>
+		</dict>
+		<key>directive</key>
+		<dict>
+			<key>match</key>
+			<string>@[\w_]*</string>
+			<key>name</key>
+			<string>keyword.directive.opa</string>
 		</dict>
 		<key>keywords</key>
 		<dict>
