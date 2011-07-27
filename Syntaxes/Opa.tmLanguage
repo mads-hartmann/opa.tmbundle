@@ -53,23 +53,34 @@
 	<dict>
 		<key>comments</key>
 		<dict>
-			<key>begin</key>
-			<string>/\*(\*)?</string>
-			<key>end</key>
-			<string>\*/</string>
-			<key>name</key>
-			<string>comment.block.opa</string>
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>match</key>
-					<string>@\w*</string>
+					<key>begin</key>
+					<string>/\*(\*)?</string>
+					<key>end</key>
+					<string>\*/</string>
 					<key>name</key>
-					<string>keyword.annotation.opa</string>
+					<string>comment.block.opa</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>@\w*</string>
+							<key>name</key>
+							<string>keyword.annotation.opa</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>#comments</string>
+						</dict>
+					</array>
 				</dict>
 				<dict>
-					<key>include</key>
-					<string>#comments</string>
+					<key>match</key>
+					<string>\/\/.*$</string>
+					<key>name</key>
+					<string>comment.single.opa</string>
 				</dict>
 			</array>
 		</dict>
