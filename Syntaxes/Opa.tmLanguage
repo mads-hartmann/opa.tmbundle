@@ -160,7 +160,7 @@
 		<key>keywords</key>
 		<dict>
 			<key>match</key>
-			<string>\b(do|match|with|db)\b</string>
+			<string>\b(do|match|with|db|if|then|begin|end|else)\b</string>
 			<key>name</key>
 			<string>keyword.opa</string>
 		</dict>
