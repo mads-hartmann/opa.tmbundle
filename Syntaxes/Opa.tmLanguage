@@ -86,7 +86,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\b(void)\b</string>
+					<string>\b(void|false|true)\b</string>
 					<key>name</key>
 					<string>constant.language</string>
 				</dict>
@@ -121,10 +121,10 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>([\w_]*)\((?=.*\)\s*(:\s(\w*))?\s*=)</string>
+					<string>^\s*(@[\w_]*)?\s*([\w_]*)\((?=.*\)\s*(:\s(\w*))?\s*=)</string>
 					<key>beginCaptures</key>
 					<dict>
-						<key>1</key>
+						<key>2</key>
 						<dict>
 							<key>name</key>
 							<string>entity.name.function</string>
@@ -153,7 +153,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>(\w*)\s*=</string>
+					<string>(\w*)(:.*)?\s*=</string>
 				</dict>
 			</array>
 		</dict>
@@ -184,12 +184,6 @@
 					<string>string.quoted.double.scala</string>
 					<key>patterns</key>
 					<array>
-						<dict>
-							<key>match</key>
-							<string>\n</string>
-							<key>name</key>
-							<string>invalid.string.newline</string>
-						</dict>
 						<dict>
 							<key>match</key>
 							<string>\\.</string>
