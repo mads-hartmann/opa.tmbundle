@@ -118,6 +118,18 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
+							<string>entity.name.module</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>([\w_]*)\s*=\s*{{</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
 							<string>keyword.opa</string>
 						</dict>
 						<key>2</key>
