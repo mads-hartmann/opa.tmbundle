@@ -134,6 +134,11 @@
 					<string>^\s*(@[\w_]*)?\s*([\w_]*)\((?=.*\)\s*(:\s(\w*))?\s*=)</string>
 					<key>beginCaptures</key>
 					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.directive.opa</string>
+						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
@@ -142,14 +147,6 @@
 					</dict>
 					<key>end</key>
 					<string>\)\s*(:\s(\w*))?\s*=</string>
-					<key>endCaptures</key>
-					<dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>entity.name.type</string>
-						</dict>
-					</dict>
 					<key>patterns</key>
 					<array/>
 				</dict>
@@ -173,6 +170,31 @@
 			<string>@[\w_]*</string>
 			<key>name</key>
 			<string>keyword.directive.opa</string>
+		</dict>
+		<key>embedded-source</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>{</string>
+					<key>end</key>
+					<string>}</string>
+					<key>name</key>
+					<string>source.opa.embeded.block</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#code</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>#embedded-source</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
 		</dict>
 		<key>keywords</key>
 		<dict>
@@ -262,19 +284,8 @@
 							<string>#xml-attribute</string>
 						</dict>
 						<dict>
-							<key>begin</key>
-							<string>{</string>
-							<key>end</key>
-							<string>}</string>
-							<key>name</key>
-							<string>source.opa.embeded.block</string>
-							<key>patterns</key>
-							<array>
-								<dict>
-									<key>include</key>
-									<string>#code</string>
-								</dict>
-							</array>
+							<key>include</key>
+							<string>#embedded-source</string>
 						</dict>
 					</array>
 				</dict>
