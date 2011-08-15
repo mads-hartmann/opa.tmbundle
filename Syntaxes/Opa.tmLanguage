@@ -18,35 +18,45 @@
 	<array>
 		<dict>
 			<key>include</key>
-			<string>#xml-literal</string>
-		</dict>
-		<dict>
-			<key>include</key>
-			<string>#strings</string>
-		</dict>
-		<dict>
-			<key>include</key>
-			<string>#comments</string>
-		</dict>
-		<dict>
-			<key>include</key>
-			<string>#declarations</string>
-		</dict>
-		<dict>
-			<key>include</key>
-			<string>#keywords</string>
-		</dict>
-		<dict>
-			<key>include</key>
-			<string>#constants</string>
-		</dict>
-		<dict>
-			<key>include</key>
-			<string>#directive</string>
+			<string>#code</string>
 		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
+		<key>code</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#xml-literal</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#strings</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#comments</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#declarations</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#keywords</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#constants</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#directive</string>
+				</dict>
+			</array>
+		</dict>
 		<key>comments</key>
 		<dict>
 			<key>patterns</key>
@@ -250,6 +260,21 @@
 						<dict>
 							<key>include</key>
 							<string>#xml-attribute</string>
+						</dict>
+						<dict>
+							<key>begin</key>
+							<string>{</string>
+							<key>end</key>
+							<string>}</string>
+							<key>name</key>
+							<string>source.opa.embeded.block</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>#code</string>
+								</dict>
+							</array>
 						</dict>
 					</array>
 				</dict>
